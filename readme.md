@@ -1,4 +1,5 @@
-![carbon(1)](https://user-images.githubusercontent.com/70065792/160603106-a4fd7cc1-67a5-4d33-b68a-b4b46889e8f7.png)
+![carbon(2)](https://user-images.githubusercontent.com/70065792/160604942-0414cfcf-9395-4b3f-b6b0-42060cb5f43e.png)
+
 
 
 #### Why fast
