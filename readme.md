@@ -1,6 +1,5 @@
 ![carbon(2)](https://user-images.githubusercontent.com/70065792/160604942-0414cfcf-9395-4b3f-b6b0-42060cb5f43e.png)
 
-
 #### Why fast
 
 - Automatic docs --> Swagger Ui and Redoc Ui
@@ -177,6 +176,26 @@ async def read_one(id: int,response:Response, db: Session = Depends(get_db)):
 ---
 
 ##### HTTPException
+
+```python
+# Delete a blog by id
+@app.delete("/blog/{id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete(id: int, db: Session = Depends(get_db)):
+    blog = db.query(models.Blog).filter(models.Blog.id == id)
+    blog = db.query(models.Blog).filter(models.Blog.id == id)
+    if not blog.first():
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Blog with id {id} not found")
+    blog.delete(synchronize_session=False)
+    db.commit()
+    return "deleted"
+```
+
+---
+
+##### Password hashing
+
+> pip install passlib[bcrypt]
+> pipenv install passlib
 
 ```
 
